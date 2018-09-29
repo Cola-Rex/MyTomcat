@@ -1,4 +1,4 @@
-package kc;
+package miniTomcat;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,7 +8,7 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
-import kc.servlet.MyServlet;
+import miniTomcat.servlet.MyServlet;
 
 public class MyTomcat {
 

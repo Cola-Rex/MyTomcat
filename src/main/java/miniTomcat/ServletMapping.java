@@ -1,4 +1,4 @@
-package kc;
+package miniTomcat;
 
 public class ServletMapping {
 

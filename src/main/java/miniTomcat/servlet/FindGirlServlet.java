@@ -1,7 +1,7 @@
-package kc.servlet;
+package miniTomcat.servlet;
 
-import kc.MyRequest;
-import kc.MyResponse;
+import miniTomcat.MyRequest;
+import miniTomcat.MyResponse;
 
 public class FindGirlServlet extends MyServlet{
 

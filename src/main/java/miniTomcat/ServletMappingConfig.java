@@ -1,4 +1,4 @@
-package kc;
+package miniTomcat;
 
 import java.util.ArrayList;
 import java.util.List;

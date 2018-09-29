@@ -1,4 +1,4 @@
-package kc;
+package miniTomcat;
 
 import java.io.IOException;
 import java.io.OutputStream;
