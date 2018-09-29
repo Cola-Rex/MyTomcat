@@ -29,7 +29,7 @@ public class MyTomcat {
 			serverSocket = new ServerSocket(port);
 			System.out.println("MyTomcat is start...麦克做得启动！");
 			
-			while(true) {
+			//while(true) {
 				Socket socket = serverSocket.accept();
 				InputStream inputStream = socket.getInputStream();
 				OutputStream outputStream = socket.getOutputStream();
@@ -41,7 +41,7 @@ public class MyTomcat {
 				dispatch(myRequest, myResponse);
 				
 				socket.close();
-			}
+			//}
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -68,10 +68,12 @@ public class MyTomcat {
 		String clazz = urlServletMap.get(myRequest.getUrl());
 		//反射
 		try {
-			Class<MyServlet> myServletClass = (Class<MyServlet>) Class.forName(clazz);
-			MyServlet myServlet = myServletClass.newInstance();
-			
-			myServlet.service(myRequest, myResponse);
+			if (!clazz.equals("") && clazz != null) {
+				Class<MyServlet> myServletClass = (Class<MyServlet>) Class.forName(clazz);
+				MyServlet myServlet = myServletClass.newInstance();
+				
+				myServlet.service(myRequest, myResponse);
+			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
