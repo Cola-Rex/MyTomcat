@@ -21,7 +21,7 @@ public class MyRequest {
 		}
 		
 		//解析HTTP请求协议
-		if (!httpRequest.equals("") && httpRequest != null) {
+		if (httpRequest != null && !httpRequest.equals("")) {
 			String httpHead = httpRequest.split("\n")[0];
 			method = httpHead.split("\\s")[0];
 			url = httpHead.split("\\s")[1];

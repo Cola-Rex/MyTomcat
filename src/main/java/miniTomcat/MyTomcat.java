@@ -68,7 +68,7 @@ public class MyTomcat {
 		String clazz = urlServletMap.get(myRequest.getUrl());
 		//反射
 		try {
-			if (!clazz.equals("") && clazz != null) {
+			if (clazz != null && !clazz.equals("")) {
 				Class<MyServlet> myServletClass = (Class<MyServlet>) Class.forName(clazz);
 				MyServlet myServlet = myServletClass.newInstance();
 				
